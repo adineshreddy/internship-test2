@@ -33,3 +33,12 @@ with open("C:/Users/Dinesh Reddy/Desktop/internship-test2-master/output/answer-1
     writer.writerow(header)
     for i in ans:
         writer.writerow(i)
+        
+filename="C:/Users/Dinesh Reddy/Desktop/internship-test2-master/output/answer-1/main.csv"
+with open(filename, 'r') as csvfile:
+    csvreader = csv.reader(csvfile)
+    fields = next(csvreader)
+    for row in csvreader:
+        rows.append(row)
+for row in rows:
+      print(row)
